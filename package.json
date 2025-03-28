@@ -1,12 +1,12 @@
 {
-  "name": "@langchain/langgraph-sdk",
+  "name": "@akhilcubet/langgraph-sdk",
   "version": "0.0.60",
   "description": "Client library for interacting with the LangGraph API",
   "type": "module",
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "clean": "rm -rf dist/ dist-cjs/",
-    "build": "yarn clean && yarn lc_build --create-entrypoints --pre --tree-shaking",
+    "build": "rimraf dist dist-cjs && yarn lc_build --create-entrypoints --pre",
     "prepack": "yarn run build",
     "format": "prettier --write src",
     "lint": "prettier --check src && tsc --noEmit",
